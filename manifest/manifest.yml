@@ -31,17 +31,17 @@ spec:
     matchLabels:
       app: demo-app
   strategy:
-    type: Recreate
+    type: RollingUpdate
   revisionHistoryLimit: 2
   template:
     metadata:
       labels:
         app: demo-app
-        version: v1.1.0-build.11
+        version: v1.1.0-build.12
     spec:
       containers:
         - name: demo-app
-          image: skikuta38/demo-app:v1.1.0-build.11
+          image: skikuta38/demo-app:v1.1.0-build.12
           imagePullPolicy: Always
           ports:
             - containerPort: 9999
