@@ -13,7 +13,7 @@ spec:
     - name: http
       port: 9999
       targetPort: 9999
-      nodePort: 
+      nodePort: 30000
   selector:
     app: demo-app
   sessionAffinity: None
@@ -37,11 +37,11 @@ spec:
     metadata:
       labels:
         app: demo-app
-        version: v1.2.0-build.1
+        version: v1.1.0-build.13
     spec:
       containers:
         - name: demo-app
-          image: skikuta38/demo-app:v1.2.0-build.1
+          image: skikuta38/demo-app:v1.1.0-build.13
           imagePullPolicy: Always
           ports:
             - containerPort: 9999
